@@ -9,7 +9,7 @@ after(() => db.end());
 test('halaman login tampil', async () => {
   const res = await request(app).get('/');
   assert.strictEqual(res.status, 200);
-  assert.match(res.text, /Selamat Tinggal/);
+  assert.match(res.text, /Selamat Datang/);
 });
 
 test('dashboard tanpa login diarahkan ke login', async () => {
