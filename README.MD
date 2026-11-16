@@ -96,10 +96,6 @@ Jika tidak diatur, nilai bawaan adalah:
 | Password | Kosong |
 | Database | `sihadir` |
 
-**Catatan:** Pastikan konfigurasi MySQL sesuai dengan pengaturan Laragon. Perhatikan juga bahwa `schema.sql` berisi perintah penghapusan dan pembuatan ulang database `sihadir`. Cadangkan data terlebih dahulu jika database tersebut sudah berisi data penting.
-
-File `akun.txt` berisi informasi akun yang dibuat oleh proses seed. Jangan mengunggah file tersebut ke repository publik.
-
 ## 4. Menjalankan CI dengan GitHub Actions
 
 1. Lakukan perubahan kode pada project.
