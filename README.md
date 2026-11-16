@@ -63,25 +63,23 @@ Pengaturan database dibaca dari variabel lingkungan `DB_HOST`, `DB_USER`, `DB_PA
 
 ## 5. Bukti Eksekusi
 
-Repository: https://github.com/ammularridzyq-coder/SiHadir_ProjectRPL
+| Bukti | Tautan |
+|-------|--------|
+| Repository | [ISI: https://github.com/USERNAME/sihadir] |
+| Run sukses | [ISI: URL run hijau] |
+| Run gagal (sengaja) | [ISI: URL run merah] |
+| Run setelah diperbaiki | [ISI: URL run hijau setelah perbaikan] |
 
-| Bukti | Keterangan | Tautan |
-|-------|------------|--------|
-| Run sukses awal | CI #1, push ke `main`, durasi 40 detik | [Halaman Actions](https://github.com/ammularridzyq-coder/SiHadir_ProjectRPL/actions) |
-| Run gagal (sengaja) | CI #2, Pull Request #1, branch `uji-gagal`, durasi 42 detik | [Pull Request #1](https://github.com/ammularridzyq-coder/SiHadir_ProjectRPL/pull/1) |
-| Run setelah perbaikan | CI #5, Pull Request #2, branch `revert-1-uji-gagal`, berhasil | [Pull Request #2](https://github.com/ammularridzyq-coder/SiHadir_ProjectRPL/pull/2) |
-| Run setelah merge | CI #6, push ke `main`, berhasil | [Halaman Actions](https://github.com/ammularridzyq-coder/SiHadir_ProjectRPL/actions) |
-
-Screenshot semua run: `bukti/actions-semua-run.png`
+Screenshot disimpan di folder `bukti/`.
 
 ## 6. Ringkasan Error dan Perbaikan
 
 | Item | Keterangan |
 |------|------------|
-| Penyebab kegagalan | Pada branch `uji-gagal`, test "halaman login tampil" diubah agar mengharapkan teks "Selamat tinggal", sedangkan halaman login menampilkan "Selamat datang". Pemeriksaan teks (assert) tidak cocok sehingga test gagal dan CI #2 berwarna merah. |
-| Pesan error di log | [ISI: salin satu baris pesan error dari log langkah `npm test` pada CI #2] |
-| Langkah perbaikan | Perubahan dibatalkan lewat Pull Request #2 (revert), sehingga test kembali mengharapkan teks "Selamat datang". |
-| Hasil setelah perbaikan | CI #5 pada Pull Request #2 berhasil. Setelah di-merge ke `main`, CI #6 juga berhasil dengan 3 test lulus. |
+| Penyebab kegagalan | [ISI: contoh, test mengharapkan teks "Selamat tinggal" sedangkan halaman menampilkan "Selamat datang"] |
+| Pesan error di log | [ISI: salin satu baris pesan dari langkah npm test] |
+| Langkah perbaikan | [ISI: contoh, mengembalikan teks yang diharapkan test sesuai tampilan halaman] |
+| Hasil setelah perbaikan | [ISI: run berhasil, 3 test lulus] |
 
 ## 7. Pembagian Peran
 
